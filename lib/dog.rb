@@ -7,14 +7,6 @@ class Dog
     @breed = breed
   end
 
-  CREATE TABLE IF NOT EXISTS dogs (
-  id INTEGER PRIMARY KEY,
-  name TEXT,
-  BREED TEXT
-  )
-  SQL
-  DB[:conn].execute(sql)
-
   def self.create_table
     sql = <<-SQL
     CREATE TABLE IF NOT EXISTS dogs (
